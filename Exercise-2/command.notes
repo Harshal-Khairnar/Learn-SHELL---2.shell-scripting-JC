@@ -1,0 +1,10 @@
+hash     : bash remember programs location by storing in hash table
+PATH     : separated list of dir's
+basename : retirn filename from full-path
+dirname  : return dir path from full-path
+for      :
+if       :
+parameters inside script, arguments outside to script.
+
+while    :
+shift    :

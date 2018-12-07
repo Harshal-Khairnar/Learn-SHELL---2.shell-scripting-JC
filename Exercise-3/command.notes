@@ -1,0 +1,63 @@
+Topic: redirection of I/O's
+
+Three I/O in linux:
+
+STDIN       => FD (0)
+STDOUT      => FD (1)
+STDERR      => FD (2)
+
+----------------------------------
+Accepting STDOUT, STDERR in files
+----------------------------------
+
+COMMAND > FILE      (Overwriting)
+COMMAND >> FILE     (Appending)
+
+1. redirecting STDIN into a program
+read LINE < ${FILE}
+
+2. redirecting STDOUT to a file
+head -n 3 /etc/passwd 1> ${FILE}
+
+3. redirecting STDERR to a file
+cat /file/not/here 2> ${FILE}
+
+4. redirecting both STDOUT and STDERR to diffrent files
+head -n 3 /etc/passwd /file/not/here 1> ${FILE.out} 2> ${FILE.err}
+
+5. redirecting STDOUT & STDERR to a file
+
+OPTION:1
+
+head -n 3 /etc/passwd /file/not/here 1> ${FILE.both} 2>&1
+
+OPTION:2
+
+head -n 3 /etc/passwd /file/not/here &> ${FILE.both} 
+
+----------------------------
+To discard STDOUT , STDERR
+----------------------------
+
+1. discarding STDOUT 
+head -n 3 /etc/passwd 1> /dev/null
+
+2. discarding STDERR 
+cat /file/not/here 2> /dev/null
+
+3. discarding both STDOUT and STDERR 
+head -n 3 /etc/passwd /file/not/here &> /dev/null
+
+--------------------------------------
+Piping STDOUT, STDERR throuh commands
+--------------------------------------
+
+1. redirecting both STDOUT and STDERR throuh pipes
+
+OPTION:1
+
+head -n3 /etc/passwd /fakefile |& cat -n
+
+OPTION:2
+
+head -n3 /etc/passwd /fakefile 2>&1  | cat -n
