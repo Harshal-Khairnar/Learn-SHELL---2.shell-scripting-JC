@@ -49,8 +49,10 @@ cat /file/not/here 2> /dev/null
 head -n 3 /etc/passwd /file/not/here &> /dev/null
 
 --------------------------------------
-Piping STDOUT, STDERR throuh commands
+Piping STDOUT, STDERR through commands
 --------------------------------------
+
+default only STDOUT can pass through pipes.
 
 1. redirecting both STDOUT and STDERR throuh pipes
 

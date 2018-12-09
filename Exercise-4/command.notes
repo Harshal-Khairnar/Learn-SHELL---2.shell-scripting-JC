@@ -1,0 +1,59 @@
+Topics: Case statements, Functions, Parsing arg with getopts
+
+1. Case statements:
+
+    syntax:
+
+        case ${OPTION} in
+            PATTERN1)
+                    COMMANDS...
+                ;;
+            PATTERN2)
+                    COMMANDS...
+                ;;
+            DEFAULT)
+                    COMMANDS...
+                ;;
+        esac
+
+2. Functions:
+
+    syntax:
+
+        OPTION1:
+            function function-name {
+                COMMANDS...
+            }
+
+        OPTION2:
+            function function-name() {
+
+            }
+    
+    readonly variable_name=value
+
+3. Parsing args:
+
+    syntax:
+
+       while getopts vl:s OPTION
+       do
+            case OPTION in
+                PATTERN1)
+                    #access arg with ${OPTARG}
+                    COMMANDS....
+                    ;;
+                ..
+                ..
+            esac
+       done
+
+4. delete user
+
+    1. locate
+    2. find 
+    3. updatedb to refresh locate
+    4. userdel -r user_name  (also removes home dir)
+    5. tar -xzvft
+    6. chage (lock user account)
+    7. passwd -l ;passwd-u (lock/unlock using passwd)
