@@ -158,4 +158,11 @@ Topics: unzip
 26. chage (change age of account)
     * NOT a shell builtin
 
-27. 
+27. ssh-copy-id
+    * NOT a shell builtin
+    It is use for remote login using ssh by using ssh-keys
+    It's match ssh-keys stored in .ssh folder on local with those in  ~/.ssh/authorized_keys on remote server
+
+28. tee 
+    * NOT a shell builtin
+    tee output to STDOUT as well as write to a file.
