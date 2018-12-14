@@ -1,0 +1,161 @@
+Topics: unzip
+
+1. To extract contents from zip
+    * NOT a shell-builtin
+
+        unzip -d dest source  -l 
+
+        zip -e -d -u -f dest  source
+
+2. UID variable
+    hold UID for user executing script
+
+3. id 
+    * NOT a shell-builtin
+
+        id -u     => gets UID
+        id -un    => gets Username
+
+4. Commands
+
+    useradd         =>  -m -c 
+    passwd          =>  --stdin -e
+    chpasswd        =>  username:passwd | chpasswd
+
+    read            => -p prompt
+
+5. RANDOM variable
+    generates a random number
+
+6. date 
+    * NOT a shell-builtin
+
+    date +%s    =>  seconds from Jan 1, 1970 
+    date +%N    =>  nanoseconds -||-
+
+7. Encryption utilities
+    * NOT a shell-builtin
+
+    sha1sum
+    sha256sum       => located @ /usr/bin
+    sha512sum
+    shasum
+
+8. Commands
+
+    fold            =>  displays words on newline with specified length
+    shuf            =>  randomly select from list of word separated by newline
+
+    head            =>  diaplays first few entries
+    tail            =>  displays last few entries
+
+9. Commands
+
+    dirname         =>  displays dir-name from full-path
+    basename        =>  displays file-name from full-path
+
+10. Special characters in shell
+
+        ${#}        => no.of parameters
+        ${@}        => all parameters
+        ${*}        => all parameters as one string
+        ${?}        => exit status of last command
+
+        ${0}        => name of script
+        ${1}        => 1st arg
+        ${2}        => 2nd arg
+         ......
+
+11. shift 
+    * It's a shell-builtin
+
+        shift N     =>  shift positional params by N
+
+12. I/O 
+
+    >           =>  create / overwrite file using STDOUT
+    >>          =>  append  file using STDOUT
+    <           =>  take input into program
+            
+    0<          =>  taking STDIN into program
+    1>          =>  creating file using STDOUT
+    2>          =>  creating file using STDERR
+    &>          =>  creating file containing both STDOUT and STDERR
+    >&2         =>  redirecting STDOUT to STDERR
+    |&          =>  redirecting STDOUT and STDERR through pipes
+
+    /dev/null   => discards STDOUT / STDERR by redirecting into It
+
+
+13. case
+    * It's a shell keyword
+
+14. variables
+
+    by default variables are global
+
+    local       =>  local to a function only , can defined in  function only
+    readonly    =>  readonly cannot be reassign after that
+
+15. exit status
+
+    exit        =>  state's exit status of script, stop execution thereafter
+    return      =>  state's exit status of function
+
+16. logger
+    * NOT a shell builtin
+    use to log messaged to syslog
+
+17. function
+
+    syntax:==>
+
+    function name(){
+
+    }
+
+    function name {
+
+    }
+
+18. getopts
+    * It's a shell builtin
+
+    = parses the arguments specified at command line,
+    = can obtain value for argument in OPTARG
+    = OPTIND represent index of argument after options on command line
+    syntax:
+        getopts vl:s OPTION   => : indicates argument required
+
+19. Commands
+    
+    type        => -a get all options, check whether command is shell builtin or not
+    help        =>  get documentation for shell builtin command
+    man         =>  get documentation for Commands
+
+20. userdel 
+    * NOT a shell builtin
+
+    userdel     => -f -r (removes user's home directory)
+
+21. netstat
+    * NOT a shell builtin
+
+    shows network statistics
+
+22. awk
+    * NOT a shell builtin
+
+23. cut 
+    * NOT a shell builtin
+
+24. sort 
+    * NOT a shell builtin
+
+25. uniq 
+    * NOT a shell builtin
+
+26. chage (change age of account)
+    * NOT a shell builtin
+
+27. 
