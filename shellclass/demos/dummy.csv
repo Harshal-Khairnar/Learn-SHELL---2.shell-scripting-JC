@@ -1,0 +1,6 @@
+IP,API,STATUS_CODE
+29.48.17.65,"GET,/apps/cart.jsp?appID=8345,HTTP/1.0",200
+140.181.105.145,"GET,/posts/posts/explore,HTTP/1.0",200
+252.94.76.104,"GET,/explore,HTTP/1.0",200
+79.199.156.133,"DELETE,/posts/posts/explore,HTTP/1.0",200
+192.141.118.125,"GET,/wp-admin,HTTP/1.0",200
